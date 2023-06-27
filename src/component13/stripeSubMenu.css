@@ -1,0 +1,551 @@
+/*CSS FOR STRIPE*/
+/* File: font.css */
+@font-face {
+  font-family: 'Sohne';
+  src: url('./Sohne.otf');
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Sohne', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  border: none;
+  /* color: white; interfiere con navBAr*/
+}
+
+:root {
+  --trans: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  --color: rgb(5, 26, 25);
+  --bgc: rgba(255, 255, 255, 0.8);
+  --bgc: rgb(241, 245, 248);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --radius: 0.25rem;
+  --transition: all 0.3s linear;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+h3 {
+  font-size: 4rem;
+}
+
+body {
+  /* background-color: rgb(1, 17, 17); */
+  background: var(--bgc);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/********NavBar*******/
+nav .navHeader .navLogo:hover,
+.navLinks .pageBtnContainer .pageBtn:hover {
+  opacity: 0.7;
+}
+
+button,
+a {
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: capitalize;
+}
+
+.navLogo {
+  margin-top: 0.5rem;
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 0;
+  z-index: 10;
+}
+
+nav .navContainer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.navLinks ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+}
+
+.navLinks li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navLinks .pageBtnContainer button {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+
+.subLink .pageBtn {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/**********Sign In Button************/
+.signIn {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 0.4rem 0.5rem;
+  border-radius: 2rem;
+  /* margin: 0; */
+  font-size: 1.2rem;
+  text-transform: none;
+  transition: all 0.3s linear;
+  width: 8rem;
+  min-height: 2rem;
+}
+
+.signIn {
+  display: flex;
+  justify-content: space-evenly;
+  letter-spacing: 1px;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+/******Arrows************/
+.signIn .chevron {
+  display: inline-block;
+  padding-left: 0rem;
+  margin-left: 0;
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+  transition: var(--trans);
+}
+.signIn .arrow {
+  display: inline-block;
+  padding-left: 0rem;
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+.signIn:hover {
+  background-color: #ffffff80;
+}
+.signIn:hover .arrow {
+  display: inline-block;
+}
+.signIn:hover .chevron {
+  display: none;
+}
+
+/****SubMenu*****/
+
+.subMenu .noShow {
+  display: none;
+}
+
+.navLinks .subMenu {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.navLinks .subMenu {
+  display: grid;
+  background: #eff;
+  box-shadow: 2px 0px 1px rgba(0, 0, 0, 0.26);
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  transition: all 0.7s linear;
+}
+/*pointer*/
+.subMenu.show::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-bottom: 10px solid #eff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  position: absolute;
+  top: -10px;
+  left: 0;
+  /* transform: translateX(-50%); */
+  transform: translateX(144px);
+  display: block;
+}
+
+.navLinks .subMenu li {
+  width: auto;
+  min-width: 155px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.navLinks .subMenu li {
+  display: flex;
+  justify-content: start;
+}
+
+.navLinks .subMenu .subLink span {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: rgb(77, 72, 90);
+}
+.subLinks .icon,
+.navLinks .subMenu .subLink .icon {
+  fill: gray;
+  font-size: 1.5rem;
+}
+
+.subLinks .pageBtn:hover .Icon-1,
+.navLinks .subMenu .subLink:hover .Icon-1 {
+  fill: rgb(33, 179, 223);
+  transform: scale(1.2);
+}
+.subLinks .pageBtn:hover .Icon-2,
+.navLinks .subMenu .subLink:hover .Icon-2 {
+  fill: rgb(203, 59, 236);
+  transform: scale(1.2);
+}
+.subLinks .pageBtn:hover .Icon-3,
+.navLinks .subMenu .subLink:hover .Icon-3 {
+  fill: rgb(53, 196, 60);
+  transform: scale(1.2);
+}
+
+.navLinks .subMenu .FaArrowRight {
+  visibility: hidden;
+}
+
+.navLinks .subMenu .subLink:hover .FaArrowRight {
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0.25rem;
+  margin-right: 0;
+}
+
+.navLinks .subMenu {
+  transition: all 0.7s ease-in-out;
+}
+/****SHOWCASE*******/
+.showCase {
+  position: relative;
+  top: -5rem;
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.showCase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../assets/data13/images/hero.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* z-index: -1; */
+  height: 100%;
+  width: 100%;
+}
+.showCase .showCaseContent {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin-top: 3rem;
+  z-index: 1;
+}
+
+.showCaseInfo h1 {
+  font-size: 3rem;
+  padding: 0 1rem;
+  color: black;
+  margin-top: 2rem;
+}
+
+.showCaseInfo p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: rgb(59, 59, 59);
+  text-align: justify;
+  padding: 1rem;
+}
+
+.phoneImg {
+  display: block;
+  margin-top: 5rem;
+  justify-self: center;
+  padding-right: 1rem;
+  /* max-width: 9rem; */
+  width: auto;
+}
+
+.showCaseBtn {
+  background-color: black;
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  height: auto;
+  margin-left: 1rem;
+  min-width: 5rem;
+  transition: all 0.25s linear;
+  color: white;
+}
+
+.showCaseBtn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  /******menuBtn**********/
+  nav .navContainer .navHeader .menuBtn {
+    position: absolute;
+    right: 8%;
+    width: 3.5rem;
+    height: 2.5rem;
+    color: white;
+  }
+
+  nav .navContainer .navHeader .menuBtn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1.25rem;
+  }
+  .menuBtn .icon {
+    margin-top: 0.25rem;
+  }
+
+  nav .navContainer .menuBtn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: transparent;
+  }
+
+  /*-------menuBtn---------*/
+
+  nav .navContainer {
+    width: 90vw;
+    max-width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav .navHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  nav .signIn {
+    display: none;
+    visibility: hidden;
+  }
+
+  .navLinks {
+    display: none;
+  }
+  /*-------showCase-----------*/
+
+  .showCase .showCaseContent {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 100%;
+  }
+
+  .showCase::before {
+    background-size: cover;
+    height: 65%;
+  }
+
+  .showCaseInfo h1 {
+    width: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .showCase-info p {
+    max-width: 35em;
+    line-height: 1.8;
+  }
+
+  .phoneImg {
+    display: none;
+  }
+}
+
+/*****SIDEBAR****/
+/* NAV SIDEBAR min 800px*/
+@media screen and (min-width: 800px) {
+  nav .menuBtn {
+    display: none;
+  }
+
+  nav .navContainer {
+    position: relative;
+  }
+
+  .sideBarCard {
+    display: none;
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/************SideBar**************/
+@media screen and (max-width: 800px) {
+  .sideBarCard.show {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    transform: scale(1);
+    transform: translateX(-50%), scale(1);
+    transition: all 0.5s linear;
+    margin-top: 1.5rem;
+  }
+
+  .sideBarCard.show {
+    width: 90%;
+    height: auto;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.26);
+    border-radius: 1rem;
+    z-index: 10;
+    background-color: white;
+  }
+
+  .sideBarCard.noShow {
+    display: none;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .blueLogo {
+    font-weight: bolder;
+    text-shadow: 0px 2px 0 rgba(0, 0, 0, 0.26);
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .sideBarHeader .closeBtn {
+    font-size: 1.5rem;
+    fill: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .sideBarHeader .closeBtn:hover {
+    transform: rotate(10deg);
+    fill: rgb(203, 23, 203);
+  }
+
+  .sideBarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em 1.5rem;
+    background-color: white;
+    height: 4rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  article .sideBarPage {
+    color: black;
+
+    text-transform: capitalize;
+    font-size: 2rem;
+
+    padding: 1rem 1rem;
+    display: grid;
+    width: 98%;
+    margin: auto;
+  }
+
+  /*----subLink----*/
+  article.sideBarPageLinks {
+    background-color: rgba(246, 259, 251, 1);
+    margin: 0 1rem 0 1rem;
+  }
+  article .subLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.25rem;
+    justify-content: space-between;
+  }
+  /*-------------*/
+  .sideBarCard article {
+    border-top: 1px dashed #9e9e9e;
+  }
+
+  .sideBarCard article:nth-child(2) {
+    border-top: none;
+    border-radius: 10px 10px 0 0;
+  }
+  .sideBarCard article:last-of-type {
+    border-radius: 0 0 10px 10px;
+  }
+
+  /*-------------*/
+  .subLinks .pageBtn {
+    color: rgb(22, 110, 112);
+    font-size: 1.8rem;
+    height: auto;
+    padding: 1rem;
+    width: auto;
+    justify-self: start;
+  }
+
+  .sideBarSignIn {
+    height: 5rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+  }
+
+  .sideBarSignIn .signIn {
+    background-color: rgb(99, 91, 255);
+    margin: auto;
+  }
+
+  .sideBarSignIn .signIn:hover {
+    background-color: rgb(12, 39, 66);
+    margin: auto;
+  }
+}

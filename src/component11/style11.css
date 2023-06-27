@@ -1,0 +1,147 @@
+/*CSS component 11 NavBar*/
+
+:root {
+  --bgc-body: rgb(145, 241, 241, 0.26);
+  --ligth-shadow: 0 5px 15px rgba(0, 0, 0, 0, 1);
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bgc-body);
+}
+
+.nav a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section.nav {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-central {
+  background-color: #fff;
+  height: 60px;
+}
+
+.nav-header .logo {
+  width: 100px;
+  margin-top: 0.8rem;
+  height: 40px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  background-color: rgb(2, 57, 57);
+  /* border-radius: 45% 30% 45% 30%; */
+
+  margin-left: 1rem;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-btn {
+  font-size: 2rem;
+  background: transparent;
+  transition: transform 0.3s ease;
+  align-self: center;
+  cursor: pointer;
+  margin-right: 3rem;
+  margin-top: 0.4rem;
+}
+
+.bar-btn:hover {
+  transform: rotate(-90deg);
+  color: teal;
+}
+
+.link-container .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-top: 1.5rem; */
+}
+.links li {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.links a {
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+  display: block;
+  color:black;
+}
+
+.links a:hover {
+  background-color: #ccc;
+  color: teal;
+  padding-left: 1.5rem;
+  width: 100%;
+}
+
+.nav-central .social {
+  display: none;
+}
+
+.link-container {
+  height: 0rem;
+  overflow: hidden;
+
+  transition: all 0.4s linear;
+  background-color: #ffff;
+}
+
+@media screen and (min-width: 800px) {
+  .bar-btn {
+    display: none;
+  }
+
+  .nav-central {
+    min-width: 90%;
+    display: flex;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+  }
+  .link-container {
+    height: auto !important;
+  }
+  .link-container .links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: 0;
+    align-items: center;
+  }
+
+  .links a:hover {
+    color: rgb(1, 7, 7);
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid teal;
+    background-color: transparent;
+  }
+
+  .nav-central .social {
+    display: flex;
+    height: 1rem;
+    width: 40%;
+    margin-left: 0.5rem;
+    justify-content: center;
+  }
+
+  .nav .logo {
+    width: 100px;
+    margin-top: 0.35rem;
+  }
+}

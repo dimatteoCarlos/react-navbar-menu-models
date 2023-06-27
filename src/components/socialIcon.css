@@ -1,0 +1,72 @@
+/*Style css for SocialIcon.jsx*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* [class*='fa'], a{
+  background-color: orange;
+
+} */
+
+/*****Social*****/
+ul.social {
+  display: flex;
+  justify-content: center;
+}
+ul.social li a {
+  padding: 0 1rem;
+}
+.social li:hover {
+  transform: scale(1.2);
+}
+.fa-facebook {
+  color: #0571e6;
+}
+.fa-twitter {
+  color: #1d9bf0;
+  z-index: 1;
+  background-color: transparent;
+}
+.fa-telegram {
+  color: #0a88c7;
+  z-index: 1;
+  background-color: transparent;
+}
+.fa-instagram {
+  color: #f15245;
+}
+.fa-youtube {
+  color: #e21;
+}
+.fa-discord {
+  color: #404eed;
+}
+.fa-globe {
+  color: #1ed95f;
+}
+.fa-linkedin {
+  color: #0a66c2;
+}
+.fa-behance {
+  color: black;
+}
+.fa-globe {
+  color: white;
+}
+
+.fa-behance:hover {
+  color: #0156ff;
+}
+
+/*****Social*****/

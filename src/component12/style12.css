@@ -1,0 +1,235 @@
+/*CSS component 12 NavBar*/
+* {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --bgc-body: rgb(145, 241, 241, 0.26);
+  --ligth-shadow: 0 5px 15px rgba(0, 0, 0, 0, 1);
+  --border-xBtn: 24px;
+  --timeTr: 0.4s;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bgc-body);
+}
+body {
+  border-radius: 0 0 80% 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+/***Home**/
+main .sideBarBtn {
+  background-color: transparent;
+  padding: 2rem;
+}
+main .btnContainer {
+  padding: 0;
+  margin: 0;
+}
+
+main .sideBarBtn.show {
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 0 var(--border-xBtn) 0 0;
+  text-align: start;
+  width: 14.08rem !important;
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+main .sideBarBtn.show .icon {
+  transform: scale(1);
+  animation-play-state: paused;
+}
+
+main button.showModal {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main button.showModal {
+  max-width: 11rem;
+  height: 3.12rem;
+  cursor: pointer;
+}
+
+main button.noShow {
+  display: none;
+}
+
+main button.showModal {
+  border-radius: 0.5rem;
+  outline: none;
+  border: 0.25rem #090909 solid;
+  padding: 0.5rem 1rem;
+  box-shadow: inset 0.125rem 0.125rem 0px #7c7e7e;
+  background: linear-gradient(146deg, #171717, #444245);
+  color: wheat;
+}
+
+main .showModal:hover {
+  border-radius: 19px;
+  background: linear-gradient(145deg, #94e0df, #afffff);
+  box-shadow: 12px 12px 24px #8bd4d3, -12px -12px 24px #bdffff;
+  color: rgb(0, 102, 102);
+  outline: none;
+  border: transparent;
+}
+
+.social {
+  position: absolute;
+  left: 0;
+  display: flex;
+  height: 1rem;
+  width: 60%;
+  margin-left: 0.5rem;
+  justify-content: center;
+}
+
+.social {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+
+/******SideBar*******/
+aside .logo {
+  width: 100px;
+  margin-top: 0.8rem;
+  height: 50px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  background-color: rgb(2, 57, 57);
+
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+aside {
+  display: block;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+
+  position: absolute;
+  transition: transform var(--timeTr) cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(-100%);
+  background-color: transparent;
+  border-radius: 0 0 var(--border-xBtn) 0;
+}
+
+aside.show {
+  transform: translateX(0%);
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+aside .links li a span {
+  margin-left: 0.5rem;
+}
+aside .links li {
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+aside .links li a span {
+  font-size: 1.5rem;
+}
+aside .links li div:hover {
+  background-color: rgb(175, 168, 168);
+}
+
+aside .links li .myReact-icons {
+  min-width: 2rem;
+  min-height: 2rem;
+  margin-bottom: -0.5rem;
+}
+aside .links li .myReact-icons:hover {
+  transform: scale(1.2);
+}
+
+aside .social {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+/*******Show Modal***********/
+
+.modalOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 1000px;
+  top: 0;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.modalContainer {
+  position: relative;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  height: 450px;
+
+  border-radius: 12px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.26);
+}
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.modalContainer h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.modalContainer .closeBtn .icon {
+  color: red;
+  width: 30px;
+  height: 30px;
+}
+.modalContainer .closeBtn .icon {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/*****Animations****/
+.sideBarBtn .icon {
+  animation: bumping 3s infinite ease-in-out;
+}
+@keyframes bumping {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
