@@ -12,7 +12,7 @@ React application with conditional rendering, useState, && operator, dynamic cla
 
 Importing images
 
-dependencies: react-icons and IconContext from react-icons.
+dependencies: react-icons with useage of IconContext from react-icons, react-router-dom, nanoid. 
 
 Css: position relative and absolute, z-index and position hierarchy, linear gradient, box-shadow, @keyframes, animation, transform:translate, transition hover, transform:scale(), flexbox.
 
@@ -29,9 +29,7 @@ Java Script knowledge: getBoundingClientRect().height to get the height of an el
 /************\*\*\*************/
 Stripe SubMenu App
 Knowledge applied:
-
 ---
-
 ## Conditional rendering.
 
 Usage of IconContext, provided by react-icons, to dynamically associate a class to the icons rendered. In this way, it is possible to style each rendered icon without hardcoding.
@@ -50,4 +48,4 @@ change the color of a svg
 
 ## css usage: hover, flex, grid, ::before, z-index, position,transform, transition, scale(), opacity, box-shadow, text-shadow. @font-face to import font style from a file.
 
-## JavaScript built in functions: Math.random(), Math.ceil(), Math.abs().
+## JavaScript built in functions: Math.random(), Math.ceil(), Math.abs(), getBoundingClientRect().
